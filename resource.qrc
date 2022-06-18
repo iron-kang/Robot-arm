@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/resource/model">
+        <file>resource/model/base.obj</file>
+        <file>resource/model/gripper.obj</file>
+        <file>resource/model/link1.obj</file>
+        <file>resource/model/link2.obj</file>
+        <file>resource/model/link3.obj</file>
+        <file>resource/model/servo2.obj</file>
+        <file>resource/model/servo3.obj</file>
+        <file>resource/model/servo4-5.obj</file>
+        <file>resource/model/servo6.obj</file>
+        <file>resource/model/servo1.obj</file>
+        <file>resource/model/gripper_open.obj</file>
+        <file>resource/model/axis-z.obj</file>
+        <file>resource/model/axis-y.obj</file>
+        <file>resource/model/axis-x.obj</file>
+    </qresource>
+    <qresource prefix="/resource/image">
+        <file>resource/image/xbox-en.png</file>
+        <file>resource/image/xbox-dis.png</file>
+        <file>resource/image/home.png</file>
+        <file>resource/image/axis-dis.png</file>
+        <file>resource/image/axis-en.png</file>
+        <file>resource/image/arm-offline.png</file>
+        <file>resource/image/arm-online.png</file>
+        <file>resource/image/record.png</file>
+        <file>resource/image/play.png</file>
+        <file>resource/image/stop.png</file>
+    </qresource>
+</RCC>
