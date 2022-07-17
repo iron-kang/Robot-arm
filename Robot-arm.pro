@@ -32,16 +32,16 @@ SOURCES += \
         scene3d.cpp \
         robotarm.cpp \
         robotic.cpp \
-    network.cpp \
-    tcpservice.cpp
+        network.cpp \
+        tcpservice.cpp
 
 HEADERS += \
         mainwindow.h \
         scene3d.h \
         robotarm.h \
         robotic.h \
-    network.h \
-    tcpservice.h
+        network.h \
+        tcpservice.h
 
 FORMS += \
         mainwindow.ui

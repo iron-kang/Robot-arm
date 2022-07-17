@@ -109,6 +109,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(t_viewV, SIGNAL(timeout()), this, SLOT(viewV()));
 
     ui->btn_update->hide();
+    ui->btn_connect->hide();
 
     isConnect   = false;
     isOpen = false;
