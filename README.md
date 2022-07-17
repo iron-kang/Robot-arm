@@ -10,8 +10,6 @@ sudo apt install libopenblas-dev liblapack-dev libboost-dev
 sudo apt-get install libarmadillo-dev
 ```
 ## Funtions
-<center>
 |<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/axis-dis.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/home.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/record.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/stop.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/xbox-dis.png" width="50%"/>|
-|---|---|---|---|---|
-|Display 3D Cartesian coordinate|Home return|Record waypoint|Replay record|Joystick control|
-</center>
+|:---:|:---:|:---:|:---:|:---:|
+|<center>Display 3D Cartesian coordinate</center>|<center>Home return</center>|Record waypoint|Replay record|Joystick control|
