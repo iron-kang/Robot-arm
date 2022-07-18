@@ -14,12 +14,18 @@ sudo apt-get install libarmadillo-dev
 |:---:|:---:|:---:|:---:|:---:|
 |<center>Display 3D axis</center>|<center>Home return</center>|Record waypoint|Replay record|Joystick control|
 ### Joystick control
-<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller.jpg" width="60%"/>
-1. Move horzontally and vertically.
+|<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller.jpg" width="70%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller-back.jpg" width="70%"/>|
+|:--:|:--:|
+1. Move horzontally and vertically
 2. Joint 5 rotation CCW
 6. Replay record
 7. Joint 5 rotation CW
-
+8. Veiwport control
+10. Joint 5 Rotation / Move forward
+11. Speed decrease
+14. Speed increase
+A. Add waypoint
+B. Gripper open/close
 
 ## Kinematics
 ### D-H table
