@@ -16,6 +16,7 @@ sudo apt-get install libarmadillo-dev
 ### Joystick control
 |<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller.jpg" width="70%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller-back.jpg" width="70%"/>|
 |:--:|:--:|
+<pre>
 1. Move horzontally and vertically
 2. Joint 5 rotation CCW
 6. Replay record
@@ -26,6 +27,7 @@ sudo apt-get install libarmadillo-dev
 14. Speed increase
 A. Add waypoint
 B. Gripper open/close
+</pre>
 
 ## Kinematics
 ### D-H table
