@@ -12,7 +12,14 @@ sudo apt-get install libarmadillo-dev
 ## Funtions
 |<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/axis-dis.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/home.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/record.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/stop.png" width="50%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/resource/image/xbox-dis.png" width="50%"/>|
 |:---:|:---:|:---:|:---:|:---:|
-|<center>Display 3D Cartesian coordinate</center>|<center>Home return</center>|Record waypoint|Replay record|Joystick control|
+|<center>Display 3D axis</center>|<center>Home return</center>|Record waypoint|Replay record|Joystick control|
+### Joystick control
+<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller.jpg" width="60%"/>
+1. Move horzontally and vertically.
+2. Joint 5 rotation CCW
+6. Replay record
+7. Joint 5 rotation CW
+
 
 ## Kinematics
 ### D-H table
