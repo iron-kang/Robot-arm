@@ -39,3 +39,7 @@ B. Gripper open/close
 |4|27.2|90|0|${\theta_4}$|
 |5|0|0|46.66|${\theta_5}$|
 |6|0|0|90|0|
+### Forward kinematics
+
+![](http://latex.codecogs.com/svg.latex?{A_1}=\\begin{bmatrix}cos{\\theta_1}&0&sin\\theta_1&a_1cos\\theta_1\\\\sin\\theta_1&0&-cos\\theta_1&a_1sin\\theta_1\\\\0&1&0&d_1\\\\0&0&0&1\\\\\end{bmatrix}) ![](http://latex.codecogs.com/svg.latex?{A_2}=\\begin{bmatrix}cos{\\theta_2}&-sin\\theta_2&0&a_2cos\\theta_2\\\\sin\\theta_2&cos\\theta_2&0&a_2sin\\theta_2\\\\0&0&1&0\\\\0&0&0&1\\\\\end{bmatrix}) ![](http://latex.codecogs.com/svg.latex?{A_3}=\\begin{bmatrix}cos{\\theta_3}&-sin\\theta_3&0&a_3cos\\theta_3\\\\sin\\theta_3&cos\\theta_3&0&a_3sin\\theta_3\\\\0&0&1&0\\\\0&0&0&1\\\\\end{bmatrix})
+
