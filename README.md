@@ -42,4 +42,8 @@ B. Gripper open/close
 ### Forward kinematics
 
 ![](http://latex.codecogs.com/svg.latex?{A_1}=\\begin{bmatrix}cos{\\theta_1}&0&sin\\theta_1&a_1cos\\theta_1\\\\sin\\theta_1&0&-cos\\theta_1&a_1sin\\theta_1\\\\0&1&0&d_1\\\\0&0&0&1\\\\\end{bmatrix}) ![](http://latex.codecogs.com/svg.latex?{A_2}=\\begin{bmatrix}cos{\\theta_2}&-sin\\theta_2&0&a_2cos\\theta_2\\\\sin\\theta_2&cos\\theta_2&0&a_2sin\\theta_2\\\\0&0&1&0\\\\0&0&0&1\\\\\end{bmatrix}) ![](http://latex.codecogs.com/svg.latex?{A_3}=\\begin{bmatrix}cos{\\theta_3}&-sin\\theta_3&0&a_3cos\\theta_3\\\\sin\\theta_3&cos\\theta_3&0&a_3sin\\theta_3\\\\0&0&1&0\\\\0&0&0&1\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?{A_4}=\\begin{bmatrix}cos{\\theta_4}&0&sin\\theta_4&a_4cos\\theta_4\\\\sin\\theta_4&0&-cos\\theta_4&a_4sin\\theta_4\\\\0&1&0&0\\\\0&0&0&1\\\\\end{bmatrix}) ![](http://latex.codecogs.com/svg.latex?{A_5}=\\begin{bmatrix}cos{\\theta_5}&-sin\\theta_5&0&0\\\\sin\\theta_5&cos\\theta_5&0&0\\\\0&0&1&d_5\\\\0&0&0&1\\\\\end{bmatrix}) ![](http://latex.codecogs.com/svg.latex?{A_6}=\\begin{bmatrix}1&0&0&0\\\\0&1&0&0\\\\0&0&1&d_6\\\\0&0&0&1\\\\\end{bmatrix})
 
+### Inverse kinematics
+
+![](http://latex.codecogs.com/svg.latex?End effector position: P)
