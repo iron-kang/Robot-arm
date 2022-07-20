@@ -31,6 +31,8 @@ B. Gripper open/close
 
 ## Kinematics
 ### D-H table
+<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/3d_dimensional.png" width="70%"/>
+
 |$Link$|${a_i}$|${\alpha_i}$|${d_i}$|${\theta_i}$|
 |:---:|:---:|:---:|:---:|:---:|
 |1|12|90|61.5|${\theta_1}$|
@@ -46,4 +48,4 @@ B. Gripper open/close
 
 ### Inverse kinematics
 
-![](http://latex.codecogs.com/svg.latex?End effector position: P)
+![](http://latex.codecogs.com/svg.latex?\\theta_1=atan2(y,x))
