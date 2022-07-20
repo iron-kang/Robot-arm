@@ -17,7 +17,7 @@ sudo apt-get install libarmadillo-dev
 |<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller.jpg" width="70%"/>|<img src="https://github.com/iron-kang/Robot-arm/blob/main/images/xbox-controller-back.jpg" width="70%"/>|
 |:--:|:--:|
 <pre>
-1. Move horzontally and vertically
+1. Move vertically and Joint 1 rotation
 2. Joint 5 rotation CCW
 6. Replay record
 7. Joint 5 rotation CW
@@ -48,4 +48,15 @@ B. Gripper open/close
 
 ### Inverse kinematics
 
-![](http://latex.codecogs.com/svg.latex?\\theta_1=atan2(y,x))
+![](http://latex.codecogs.com/svg.latex?O_6=\\begin{bmatrix}O_x\\\O_y\\\\O_z\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?R=\\begin{bmatrix}r_{11}&r_{12}&r_{13}\\\r_{21}&r_{22}&r_{23}\\\\r_{31}&r_{32}&r_{33}\\\\\end{bmatrix})
+
+![](http://latex.codecogs.com/svg.latex?O_c=\\begin{bmatrix}x_c\\\y_c\\\\z_c\\\\\end{bmatrix})
+
+![](http://latex.codecogs.com/svg.latex?\\theta_1=atan2(y_c,x_c))
+
+![](http://latex.codecogs.com/svg.latex?\\theta_3=cos^{-1}({D^{2}-(a_2^2+a_3^2)\over2a_2a_3}))
+
+
+
+
