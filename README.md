@@ -57,6 +57,9 @@ B. Gripper open/close
 
 ![](http://latex.codecogs.com/svg.latex?\\theta_3=cos^{-1}({D^{2}-(a_2^2+a_3^2)\over2a_2a_3}))
 
+![](http://latex.codecogs.com/svg.latex?\\theta_2=atan2(p_z,\\sqrt{p_x^2+p_y^2})-atan2(a_3sin\(-\\theta_3\),a_2+a_3cos\(-\\theta_3\)))
+
+
 
 
 
