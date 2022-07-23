@@ -49,9 +49,9 @@ B. Gripper open/close
 ### Inverse kinematics
 
 ![](http://latex.codecogs.com/svg.latex?O_6=\\begin{bmatrix}O_x\\\O_y\\\\O_z\\\\\end{bmatrix})
-![](http://latex.codecogs.com/svg.latex?R=\\begin{bmatrix}r_{11}&r_{12}&r_{13}\\\r_{21}&r_{22}&r_{23}\\\\r_{31}&r_{32}&r_{33}\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?R=\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
 
-![](http://latex.codecogs.com/svg.latex?O_c=\\begin{bmatrix}x_c\\\y_c\\\\z_c\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?O_c=\\begin{bmatrix}x_c\\\y_c\\\\z_c\\\\\end{bmatrix}=\\begin{bmatrix}O_x-a_1cos\\theta_1\\\O_y-a_1sin\\theta_1\\\\O_z-d_1\\\\\end{bmatrix})
 
 ![](http://latex.codecogs.com/svg.latex?\\theta_1=atan2(y_c,x_c))
 
@@ -59,7 +59,8 @@ B. Gripper open/close
 
 ![](http://latex.codecogs.com/svg.latex?\\theta_2=atan2(p_z,\\sqrt{p_x^2+p_y^2})-atan2(a_3sin\(-\\theta_3\),a_2+a_3cos\(-\\theta_3\)))
 
+![](http://latex.codecogs.com/svg.latex?R^{0}_{3}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&-cos\\theta_1sin(\\theta_2+\\theta_3)&sin\\theta_1\\\sin\\theta_1cos(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&-cos\\theta_1\\\\sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)&0\\\\\end{bmatrix})
 
-
+![](http://latex.codecogs.com/svg.latex?R^{3}_{6}={R^{0}_{3}}^{T}R=\\begin{bmatrix}cos\\theta_4cos\\theta_5&-cos\\theta_4sin\\theta_5&sin\\theta_4\\\\sin\\theta_4cos\\theta_5&-sin\\theta_4sin\\theta_5&-cos\\theta_4\\\\sin\\theta_4&cos\\theta_4&0\\\\\end{bmatrix}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&sin\\theta_1cos(\\theta_2+\\theta_3)&sin(\\theta_2+\\theta_3)\\\\-cos\\theta_1sin(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)\\\\sin\\theta_1&-cos\\theta_1&0\\\\\end{bmatrix}\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
 
 
