@@ -299,26 +299,6 @@ void RobotArm::setPos(float *pos)
 
 bool RobotArm::updateIK(float *joint)
 {
-#if 0
-    mat pc(3,1);
-
-    float s234 = sqrt(pow(m_ori[5](0,2), 2) + pow(m_ori[5](1,2), 2));
-    float theta1 = atan2(m_ori[5](1,2), m_ori[5](0,2));
-    if (theta1*R2D < limit[0][0])
-        theta1 += M_PI;
-    else if (theta1*R2D > limit[0][1])
-        theta1 -= M_PI;
-    float c1c234 = cos(theta1)*(-m_ori[5](2,2));
-    float s1c234 = sin(theta1)*(-m_ori[5](2,2));
-    pc(0) = m_pos[5](0)-(d5+d6)*m_ori[5](0,2)-a4*c1c234;
-    pc(1) = m_pos[5](1)-(d5+d6)*m_ori[5](1,2)-a4*s1c234;
-    pc(2) = m_pos[5](2)-(d5+d6)*m_ori[5](2,2)-a4*s234;
-//    m_position_TF->setTranslation(QVector3D(m_pos[5](0)-(d5+d6)*m_ori[5](0,2)-a4*c1c234,
-//                                            m_pos[5](1)-(d5+d6)*m_ori[5](1,2)-a4*s1c234,
-//                                            m_pos[5](2)-(d5+d6)*m_ori[5](2,2)-a4*s234));
-
-//    qDebug()<<"x: "<<pc(0)<<", "<<"y: "<<pc(1)<<", "<<"z: "<<pc(2);
-#endif
     return m_robotic->inverse(joint, m_ori[JOINT-1], m_pos[5]);
 }
 
