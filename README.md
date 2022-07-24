@@ -48,21 +48,29 @@ B. Gripper open/close
 
 ### Inverse kinematics
 
-![](http://latex.codecogs.com/svg.latex?O_6=\\begin{bmatrix}O_x\\\O_y\\\\O_z\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?O_6=\\begin{bmatrix}x_6\\\y_6\\\\z_6\\\\\end{bmatrix})
 ![](http://latex.codecogs.com/svg.latex?R=\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
 
-![](http://latex.codecogs.com/svg.latex?O_c=\\begin{bmatrix}x_c\\\y_c\\\\z_c\\\\\end{bmatrix}=\\begin{bmatrix}O_x-a_1cos\\theta_1\\\O_y-a_1sin\\theta_1\\\\O_z-d_1\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?P_4=O_6-(d_5+d_6)R\\begin{bmatrix}0\\\0\\\\1\\\\\end{bmatrix}=\\begin{bmatrix}x_6-(d_5+d_6)R_{02}\\_6-(d_5+d_6)R_{12}\\\\z_6-(d_5+d_6)R_{22}\\\\\end{bmatrix})
+
+![](http://latex.codecogs.com/svg.latex?A^{1}_{3}A_4=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&-cos\\theta_1sin(\\theta_2+\\theta_3)&sint\\theta_1&x_c\\\sin\\theta_1cos(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&-cos\\theta_1&y_c\\\\sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)&0&z_c\\\\0&0&0&1\\\\\end{bmatrix}\\begin{bmatrix}cos{\\theta_4}&0&sin\\theta_4&a_4cos\\theta_4\\\\sin\\theta_4&0&-cos\\theta_4&a_4sin\\theta_4\\\\0&1&0&0\\\\0&0&0&1\\\\\end{bmatrix})
+
+![](http://latex.codecogs.com/svg.latex?\\begin{cases}-cos\\theta_1sin(\\theta_2+\\theta_3+\\theta_4)=R_{02}\\\\-sin\\theta_1sin(\\theta_2+\\theta_3+\\theta_4)=R_{12}\\\\cos(\\theta_2+\\theta_3+\\theta_4)=R_{22}\\end{cases}=>\\begin{cases}sin(\\theta_2+\\theta_3+\\theta_4)=\\sqrt{R_{02}^2+R_{12}^2}\\\\\\theta_1=atan2(R_{12},R_{02})\\\\cos\\theta_1cos(\\theta_2+\\theta_3+\\theta_4)=cos\\theta_1R_{22}\\\\sin\\theta_1cos(\\theta_2+\\theta_3+\\theta_4)=sin\\theta_1R_{22}\\end{cases})
+
+![](http://latex.codecogs.com/svg.latex?\\begin{bmatrix}x_c\\\y_c\\\\z_c\\\\\end{bmatrix}=\\begin{bmatrix}x_6-(d_5+d_6)R_{02}-a_4cos\\theta_1cos(\\theta_2+\\theta_3+\\theta_4)\\\y_6-(d_5+d_6)R_{12}-a_4sin\\theta_1cos(\\theta_2+\\theta_3+\\theta_4)\\\\z_6-(d_5+d_6)R_{22}-a_4sin(\\theta_2+\\theta_3+\\theta_4)\\\\\end{bmatrix})
+
+![](http://latex.codecogs.com/svg.latex?D=(x_c-a_1cos\\theta_1)^2+(y_c-a_1sin\\theta_1)^2+(z_c-d_1)^2)
 
 ![](http://latex.codecogs.com/svg.latex?\\theta_1=atan2(y_c,x_c))
 
 ![](http://latex.codecogs.com/svg.latex?\\theta_3=cos^{-1}({D^{2}-(a_2^2+a_3^2)\over2a_2a_3}))
 
-![](http://latex.codecogs.com/svg.latex?\\theta_2=atan2(p_z,\\sqrt{p_x^2+p_y^2})-atan2(a_3sin\(-\\theta_3\),a_2+a_3cos\(-\\theta_3\)))
+![](http://latex.codecogs.com/svg.latex?\\theta_2=atan2(p_z,\\sqrt{p_x^2+p_y^2})-atan2(a_3sin\\theta_3,a_2+a_3cos\\theta_3))
 
-![](http://latex.codecogs.com/svg.latex?R^{0}_{3}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&-cos\\theta_1sin(\\theta_2+\\theta_3)&sin\\theta_1\\\sin\\theta_1cos(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&-cos\\theta_1\\\\sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)&0\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?R^{1}_{3}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&-cos\\theta_1sin(\\theta_2+\\theta_3)&sin\\theta_1\\\sin\\theta_1cos(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&-cos\\theta_1\\\\sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)&0\\\\\end{bmatrix})
 
-![](http://latex.codecogs.com/svg.latex?R^{3}_{6}={R^{0}_{3}}^{T}R=\\begin{bmatrix}cos\\theta_4cos\\theta_5&-cos\\theta_4sin\\theta_5&sin\\theta_4\\\\sin\\theta_4cos\\theta_5&-sin\\theta_4sin\\theta_5&-cos\\theta_4\\\\sin\\theta_5&cos\\theta_5&0\\\\\end{bmatrix}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&sin\\theta_1cos(\\theta_2+\\theta_3)&sin(\\theta_2+\\theta_3)\\\\-cos\\theta_1sin(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)\\\\sin\\theta_1&-cos\\theta_1&0\\\\\end{bmatrix}\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?R^{3}_{6}={R^{1}_{3}}^{T}R=\\begin{bmatrix}cos\\theta_4cos\\theta_5&-cos\\theta_4sin\\theta_5&sin\\theta_4\\\\sin\\theta_4cos\\theta_5&-sin\\theta_4sin\\theta_5&-cos\\theta_4\\\\sin\\theta_5&cos\\theta_5&0\\\\\end{bmatrix}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&sin\\theta_1cos(\\theta_2+\\theta_3)&sin(\\theta_2+\\theta_3)\\\\-cos\\theta_1sin(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)\\\\sin\\theta_1&-cos\\theta_1&0\\\\\end{bmatrix}\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
 
-![](http://latex.codecogs.com/svg.latex?\\theta_4=cos^{-1}(cos\\theta_1sin(\\theta_2+\\theta_3)R_{13}+sin\\theta_1sin(\\theta_2+\\theta_3R_{23}-cos(\\theta_2+\\theta_3)R_{33})))
+![](http://latex.codecogs.com/svg.latex?\\theta_4=cos^{-1}(cos\\theta_1sin(\\theta_2+\\theta_3)R_{13}+sin\\theta_1sin(\\theta_2+\\theta_3)R_{23}-cos(\\theta_2+\\theta_3)R_{33})))
 
 ![](http://latex.codecogs.com/svg.latex?\\theta_5=sin^{-1}(sin\\theta_1R_{11}-cos\\theta_1R_{21}))
