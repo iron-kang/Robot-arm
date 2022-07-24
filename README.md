@@ -61,6 +61,8 @@ B. Gripper open/close
 
 ![](http://latex.codecogs.com/svg.latex?R^{0}_{3}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&-cos\\theta_1sin(\\theta_2+\\theta_3)&sin\\theta_1\\\sin\\theta_1cos(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&-cos\\theta_1\\\\sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)&0\\\\\end{bmatrix})
 
-![](http://latex.codecogs.com/svg.latex?R^{3}_{6}={R^{0}_{3}}^{T}R=\\begin{bmatrix}cos\\theta_4cos\\theta_5&-cos\\theta_4sin\\theta_5&sin\\theta_4\\\\sin\\theta_4cos\\theta_5&-sin\\theta_4sin\\theta_5&-cos\\theta_4\\\\sin\\theta_4&cos\\theta_4&0\\\\\end{bmatrix}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&sin\\theta_1cos(\\theta_2+\\theta_3)&sin(\\theta_2+\\theta_3)\\\\-cos\\theta_1sin(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)\\\\sin\\theta_1&-cos\\theta_1&0\\\\\end{bmatrix}\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?R^{3}_{6}={R^{0}_{3}}^{T}R=\\begin{bmatrix}cos\\theta_4cos\\theta_5&-cos\\theta_4sin\\theta_5&sin\\theta_4\\\\sin\\theta_4cos\\theta_5&-sin\\theta_4sin\\theta_5&-cos\\theta_4\\\\sin\\theta_5&cos\\theta_5&0\\\\\end{bmatrix}=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&sin\\theta_1cos(\\theta_2+\\theta_3)&sin(\\theta_2+\\theta_3)\\\\-cos\\theta_1sin(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)\\\\sin\\theta_1&-cos\\theta_1&0\\\\\end{bmatrix}\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
 
+![](http://latex.codecogs.com/svg.latex?\\theta_4=cos^{-1}(cos\\theta_1sin(\\theta_2+\\theta_3)R_{13}+sin\\theta_1sin(\\theta_2+\\theta_3R_{23}-cos(\\theta_2+\\theta_3)R_{33})))
 
+![](http://latex.codecogs.com/svg.latex?\\theta_5=sin^{-1}(sin\\theta_1R_{11}-cos\\theta_1R_{21}))
