@@ -51,7 +51,7 @@ B. Gripper open/close
 ![](http://latex.codecogs.com/svg.latex?O_6=\\begin{bmatrix}x_6\\\y_6\\\\z_6\\\\\end{bmatrix})
 ![](http://latex.codecogs.com/svg.latex?R=\\begin{bmatrix}R_{11}&R_{12}&R_{13}\\\R_{21}&R_{22}&R_{23}\\\\R_{31}&R_{32}&R_{33}\\\\\end{bmatrix})
 
-![](http://latex.codecogs.com/svg.latex?P_4=O_6-(d_5+d_6)R\\begin{bmatrix}0\\\0\\\\1\\\\\end{bmatrix}=\\begin{bmatrix}x_6-(d_5+d_6)R_{02}\\_6-(d_5+d_6)R_{12}\\\\z_6-(d_5+d_6)R_{22}\\\\\end{bmatrix})
+![](http://latex.codecogs.com/svg.latex?P_4=O_6-(d_5+d_6)R\\begin{bmatrix}0\\\0\\\\1\\\\\end{bmatrix}=\\begin{bmatrix}x_6-(d_5+d_6)R_{02}\\\\y_6-(d_5+d_6)R_{12}\\\\z_6-(d_5+d_6)R_{22}\\\\\end{bmatrix})
 
 ![](http://latex.codecogs.com/svg.latex?A^{1}_{3}A_4=\\begin{bmatrix}cos\\theta_1cos(\\theta_2+\\theta_3)&-cos\\theta_1sin(\\theta_2+\\theta_3)&sint\\theta_1&x_c\\\sin\\theta_1cos(\\theta_2+\\theta_3)&-sin\\theta_1sin(\\theta_2+\\theta_3)&-cos\\theta_1&y_c\\\\sin(\\theta_2+\\theta_3)&cos(\\theta_2+\\theta_3)&0&z_c\\\\0&0&0&1\\\\\end{bmatrix}\\begin{bmatrix}cos{\\theta_4}&0&sin\\theta_4&a_4cos\\theta_4\\\\sin\\theta_4&0&-cos\\theta_4&a_4sin\\theta_4\\\\0&1&0&0\\\\0&0&0&1\\\\\end{bmatrix})
 
